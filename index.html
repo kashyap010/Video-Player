@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video">
+        <div class="video-background">
+            <video>
+                <source src="./VID-20190712-WA0035.mp4" type="video/mp4" autoplay></source>
+            </video>
+        </div>
+        <div class="video-controls">
+            <div class="progress-bar"><div class="progress-bar-track"></div></div>
+            <div class="video-controls-options">
+                <div class="controls-left">
+                    <div class="play-pause"><i class="fas fa-play fa-lg"></i></div>
+                    <div class="volume-icon"><i class="fas fa-volume-up fa-lg"></i></div>
+                    <div class="volume-slider"><div class="volume-slider-track"></div></div>
+                </div>
+                <div class="controls-right">
+                    <div class="speed">
+                        <select id="playback-speed" onchange="changePlaybackRate();">
+                            <option value="0.50">0.5x</option>
+                            <option value="1.00" selected>1.0x</option>
+                            <option value="1.50">1.5x</option>
+                            <option value="2.00">2.0x</option>
+                        </select>
+                    </div>
+                    <div class="track-info" style="margin-left: 5px;"><span class="running">0:00</span>/<span class="total">2:01</span></div>
+                    <div class="full-screen" style="margin-left: 5px;"><i class="fas fa-expand fa-lg"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
